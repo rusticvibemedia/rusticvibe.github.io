@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Keepsafe Alternative With No Subscription | Envault</title>
+<meta name="description" content="Envault vs Keepsafe: an offline iPhone vault for photos, videos, notes, passwords and cards. No account, no cloud, no ads, one payment. An honest side-by-side comparison.">
+<meta name="apple-itunes-app" content="app-id=6788605532">
+<link rel="canonical" href="https://rusticvibemedia.github.io/rusticvibe.github.io/envault/keepsafe-alternative.html">
+<meta property="og:title" content="A Keepsafe alternative with no subscription">
+<meta property="og:description" content="An honest side-by-side of Envault and Keepsafe.">
+<meta property="og:image" content="https://rusticvibemedia.github.io/rusticvibe.github.io/envault/img/panel-7.jpg">
+<link rel="icon" type="image/png" href="img/icon-64.png">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<style>
+  :root{
+    --mint:#4FD1A5; --mint-deep:#34B98C; --navy:#0F1722; --navy-2:#162234;
+    --ink:#0B1220; --paper:#F4F7FA; --white:#FFFFFF;
+    --muted:#5B6678; --muted-dark:#98A4B8; --line:rgba(11,18,32,.10); --line-dark:rgba(255,255,255,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* Header */
+  header{background:var(--mint)}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .brand img{width:34px;height:34px;border-radius:9px}
+  .brand b{font-size:20px;font-weight:800;letter-spacing:.2px;color:var(--ink)}
+  .brand b span{color:var(--white)}
+  .bar nav a{font-size:15px;font-weight:600;text-decoration:none;color:var(--ink);opacity:.8}
+  .bar nav a:hover{opacity:1}
+
+  /* Hero */
+  .hero{background:var(--mint);padding:28px 0 56px}
+  .hero h1{font-size:clamp(56px,13vw,120px);line-height:.95;font-weight:900;letter-spacing:-.035em}
+  .hero h1 .w{color:var(--white);display:block}
+  .hero .lead{font-size:clamp(18px,2.4vw,22px);max-width:34ch;margin-top:22px;font-weight:500}
+  .cta{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--ink);color:var(--white);
+    text-decoration:none;font-weight:700;font-size:17px;padding:15px 24px;border-radius:14px;transition:transform .12s ease}
+  .cta:hover{transform:translateY(-1px)}
+  .cta svg{width:18px;height:18px}
+  .fine{font-size:14px;margin-top:12px;opacity:.75}
+
+  /* Gallery strip */
+  .strip{background:var(--navy);padding:40px 0 44px}
+  .rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 20px 8px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .rail::-webkit-scrollbar{display:none}
+  .rail img{flex:0 0 auto;width:220px;border-radius:18px;scroll-snap-align:start}
+  @media (min-width:1080px){.rail{justify-content:center;padding:0 20px 8px}.rail img{width:136px}}
+  @media (min-width:1240px){.rail img{width:150px}}
+
+  /* Sections */
+  section{padding:64px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mint-deep)}
+  h2{font-size:clamp(32px,5.4vw,48px);line-height:1.05;font-weight:900;letter-spacing:-.025em;margin-top:8px}
+  .intro{font-size:18px;color:var(--muted);max-width:56ch;margin-top:14px}
+
+  .nots{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:28px}
+  .not{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:22px}
+  .not b{display:block;font-size:20px;font-weight:800}
+  .not p{color:var(--muted);font-size:15px;margin-top:4px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:28px}
+  .item{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:22px}
+  .item .ic{width:40px;height:40px;border-radius:11px;background:var(--mint);display:grid;place-items:center;margin-bottom:14px}
+  .item .ic svg{width:22px;height:22px}
+  .item h3{font-size:18px;font-weight:800}
+  .item p{color:var(--muted);font-size:15px;margin-top:4px}
+
+  .dark{background:var(--navy);color:var(--white)}
+  .dark .intro,.dark .muted{color:var(--muted-dark)}
+  .dark .eyebrow{color:var(--mint)}
+  .split{display:grid;gap:36px;align-items:center}
+  @media (min-width:860px){.split{grid-template-columns:1.1fr .9fr}}
+  .shot{max-width:300px;margin:0 auto;border-radius:22px;overflow:hidden}
+  .list{list-style:none;margin-top:24px;display:grid;gap:14px}
+  .list li{display:flex;gap:12px;align-items:flex-start;font-size:17px}
+  .list li svg{flex:0 0 22px;width:22px;height:22px;margin-top:2px}
+  .pro{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;background:var(--mint);color:var(--ink);
+    border-radius:6px;padding:2px 7px;margin-left:8px;vertical-align:2px}
+
+  .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:28px}
+  .plan{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:26px}
+  .plan.feat{background:var(--ink);color:var(--white);border-color:var(--ink)}
+  .plan h3{font-size:24px;font-weight:900}
+  .plan .tag{font-size:15px;margin-top:2px;color:var(--muted)}
+  .plan.feat .tag{color:var(--mint)}
+  .plan ul{list-style:none;margin-top:18px;display:grid;gap:9px;font-size:16px}
+  .plan li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--mint-deep);margin-right:10px;vertical-align:2px}
+  .plan.feat li::before{background:var(--mint)}
+
+  .faq{margin-top:24px;max-width:760px}
+  details{border-top:1px solid var(--line);padding:18px 2px}
+  details:last-child{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;list-style:none;font-weight:700;font-size:18px;display:flex;justify-content:space-between;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--mint-deep);font-size:24px;font-weight:400;line-height:1}
+  details[open] summary::after{content:"\2212"}
+  details p{color:var(--muted);font-size:16px;margin-top:10px;max-width:64ch}
+
+  .closing{background:var(--mint);text-align:center;padding:72px 0}
+  .closing h2{margin:0 auto;max-width:14ch}
+
+  footer{background:var(--navy);color:var(--muted-dark);font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:10px 20px;padding-top:26px;padding-bottom:30px;align-items:center}
+  footer a{text-decoration:none}
+  footer a:hover{color:var(--white)}
+</style>
+<style>
+  .cmp{width:100%;border-collapse:separate;border-spacing:0;margin-top:28px;background:var(--white);border:1px solid var(--line);border-radius:18px;overflow:hidden;font-size:15.5px}
+  .cmp th,.cmp td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  .cmp tr:last-child td{border-bottom:0}
+  .cmp thead th{background:var(--ink);color:var(--white);font-size:14px;letter-spacing:.02em}
+  .cmp thead th:nth-child(2){color:var(--mint)}
+  .cmp td:first-child{font-weight:700;width:30%}
+  .cmp td:nth-child(2){background:rgba(79,209,165,.08)}
+  .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:28px}
+  .box{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:24px}
+  .box h3{font-size:20px;font-weight:900}
+  .box ul{margin:12px 0 0 18px;display:grid;gap:8px;color:var(--muted);font-size:16px}
+  .src{font-size:14px;color:var(--muted);margin-top:18px;max-width:80ch}
+  .src a{color:var(--muted)}
+</style></head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="./" aria-label="Envault home">
+      <img src="img/icon-180.png" alt="" width="34" height="34">
+      <b>en<span>vault</span></b>
+    </a>
+    <nav><a href="support.html">Support</a></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1 style="font-size:clamp(40px,8vw,76px)">A Keepsafe alternative.<span class="w">No subscription.</span></h1>
+    <p class="lead">Envault keeps your photos, videos, notes, passwords, documents and cards on your iPhone only. No account, no cloud, no ads. Envault Pro is one payment.</p>
+    <a class="cta" href="https://apps.apple.com/app/id6788605532">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Free on the App Store
+    </a>
+    <p class="fine">Keepsafe is a good app with a long track record. This page shows where the two differ, so you can pick the one that fits you.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Side by side</span>
+    <h2>Envault and Keepsafe.</h2>
+    <p class="intro">Keepsafe facts come from its App Store listing and its help center, checked on September 27, 2026. Prices and features can change, so check the listings before you decide.</p>
+    <div class="scroll">
+    <table class="cmp">
+      <thead><tr><th></th><th>Envault</th><th>Keepsafe</th></tr></thead>
+      <tbody>
+        <tr><td>How you pay for the full version</td><td>Envault Pro: one payment. No subscription.</td><td>Keepsafe Premium: $9.99 a month or $23.99 a year.</td></tr>
+        <tr><td>Ads in the free version</td><td>No ads.</td><td>The free version shows ads.</td></tr>
+        <tr><td>App Store privacy label</td><td>Data Not Collected.</td><td>Data Used to Track You: Usage Data.</td></tr>
+        <tr><td>Where your things are kept</td><td>Only on your iPhone. Works the same in Airplane Mode.</td><td>On your phone, plus a Private Cloud with Premium (up to 10,000 items).</td></tr>
+        <tr><td>Account and email</td><td>No account and no email.</td><td>An email address is linked to your account.</td></tr>
+        <tr><td>Forgotten PIN</td><td>No reset. The vault cannot be opened without the PIN.</td><td>A code is sent to your verified email to get back in.</td></tr>
+        <tr><td>What it holds</td><td>Photos, videos, notes, passwords, contacts, documents and wallet cards, each in its own section.</td><td>Photos, videos and files.</td></tr>
+        <tr><td>A second vault with a different PIN</td><td>Yes, with Envault Pro.</td><td>Separate PINs for single albums, with Premium.</td></tr>
+        <tr><td>After wrong PIN attempts</td><td>Each try waits longer. Optional erase after too many, with Envault Pro.</td><td>Takes a picture of break-in attempts.</td></tr>
+        <tr><td>iPhone and Android</td><td>iPhone only.</td><td>iPhone and Android.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="src">Sources: <a href="https://apps.apple.com/us/app/keepsafe-photo-vault/id510873505">Keepsafe on the App Store</a> (prices, ads, privacy label, Private Cloud, album PINs, break-in pictures) and <a href="https://support.getkeepsafe.com/hc/en-us/articles/210730623-I-lost-my-PIN-code-how-can-I-get-into-Keepsafe">Keepsafe Support: I lost my PIN code</a>. Keepsafe is a trademark of its owner. Envault is not affiliated with Keepsafe.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">Honest advice</span>
+    <h2>Which one is for you?</h2>
+    <div class="two">
+      <div class="box">
+        <h3>Pick Keepsafe if</h3>
+        <ul>
+          <li>You want a copy of your photos in the cloud.</li>
+          <li>You want to reset a forgotten PIN by email.</li>
+          <li>You also use an Android phone.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Pick Envault if</h3>
+        <ul>
+          <li>You do not want to pay every month.</li>
+          <li>You want nothing uploaded and no account at all.</li>
+          <li>You want notes, passwords, IDs and cards in the same private place.</li>
+          <li>You want a second vault that opens with a different PIN.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">Moving from Keepsafe</span>
+    <h2>Try it before you cancel.</h2>
+    <p class="intro">Envault is free with room for 25 photos and 10 videos, so you can see how it feels first. When you are ready, bring your photos in from your gallery. Remember that Envault keeps everything on this iPhone only, with no backup, so keep your own copy of anything you could not bear to lose.</p>
+    <a class="cta" style="background:var(--mint);color:var(--ink)" href="https://apps.apple.com/app/id6788605532">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Free on the App Store
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 RusticVibe Media LLC</span>
+    <a href="./">Envault</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+  </div>
+</footer>
+
+</body>
+</html>
